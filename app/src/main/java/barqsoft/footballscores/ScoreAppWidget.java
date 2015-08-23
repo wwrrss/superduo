@@ -67,6 +67,8 @@ public class ScoreAppWidget extends AppWidgetProvider {
             score = Utilies.getScores((Integer.valueOf(cursor.getString(cursor.getColumnIndex(DatabaseContract.scores_table.HOME_GOALS_COL)))),Integer.valueOf(cursor.getString(cursor.getColumnIndex(DatabaseContract.scores_table.AWAY_GOALS_COL))));
             views.setTextViewText(R.id.score_textview,score);
         }
+        //close cursor
+        cursor.close();
 
 
         // Instruct the widget manager to update the widget
